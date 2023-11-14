@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".circle4_game.view.Circle4GameActivity">
+
+    <!-- 存档区。 -->
+    <LinearLayout
+        android:id="@+id/save_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_game" />
+
+        <Button
+            android:id="@+id/load_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/load_game" />
+    </LinearLayout>
+
+    <!-- 重启按钮。 -->
+    <Button
+        android:id="@+id/reset_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/save_zone"
+        android:layout_margin="@dimen/dp_1"
+        android:text="@string/reset" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/reset_game">
+
+        <!-- 棋盘。 -->
+        <com.lihao.rxjavademo.circle4_game.view.InteractiveGameGridView
+            android:id="@+id/game_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 胜利者说明。 -->
+        <TextView
+            android:id="@+id/winner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/winner_view_bg_color"
+            android:gravity="center"
+            android:padding="@dimen/dp_50"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_18" />
+    </RelativeLayout>
+
+    <!-- 玩家指示器。 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="@string/player_in_turn"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <com.lihao.rxjavademo.circle4_game.view.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

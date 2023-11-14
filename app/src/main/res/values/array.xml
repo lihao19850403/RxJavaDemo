@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+    <string-array name="setting_teach_info_kinds_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="array_select_mobile_card_kind_name">
+        <item>移动充值卡</item>
+        <item>联通充值卡</item>
+        <item>电信充值卡</item>
+    </string-array>
+
+    <string-array name="array_select_mobile_card_kind_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="array_select_feedback_kind_name">
+        <item>建议</item>
+        <item>问题</item>
+        <item>使用感受</item>
+        <item>商务咨询</item>
+    </string-array>
+
+    <string-array name="array_recharge_card_unit_name">
+        <item>建议</item>
+        <item>问题</item>
+        <item>使用感受</item>
+        <item>商务咨询</item>
+    </string-array>
+
+    <string-array name="array_font_set_name">
+        <item>小字体</item>
+        <item>中字体</item>
+        <item>大字体</item>
+    </string-array>
+    <string-array name="quick_message_list">
+        <item>已收到,谢谢老师。</item>
+        <item>谢谢老师关心。</item>
+        <item>老师您辛苦了。</item>
+    </string-array>
+
+    <string-array name="filter_message_list">
+        <item>谢谢</item>
+        <item>知道</item>
+        <item>收到</item>
+        <item>好的</item>
+        <item>多谢</item>
+        <item>明白</item>
+    </string-array>
+
+    <string-array name="setting_identity_kinds_names">
+        <item>爸爸</item>
+        <item>妈妈</item>
+        <item>爷爷</item>
+        <item>奶奶</item>
+        <item>姥爷</item>
+        <item>姥姥</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="evaluation_list">
+        <item>该生是品德优、学习棒的好学生！</item>
+        <item>该生进步明显，继续努力哦！</item>
+        <item>该生活泼可爱，乖巧聪明！</item>
+        <item>该生成绩优异，名列前茅！</item>
+        <item>该生是关心同学，热爱集体的好学生！</item>
+        <item>该生充满活力，是班级的运动健将！</item>
+        <item>继续努力，进步空间还很大哦！</item>
+        <item>该生表现积极，是劳动小能手！</item>
+        <item>该生是班级的小管理员，老师的好助手！</item>
+    </string-array>
+    <string-array name="homework_subject_list">
+        <item>布置语文作业</item>
+        <item>布置数学作业</item>
+        <item>布置英语作业</item>
+        <item>布置物理作业</item>
+        <item>布置化学作业</item>
+        <item>布置历史作业</item>
+        <item>布置地理作业</item>
+        <item>布置生物作业</item>
+        <item>布置政治作业</item>
+        <item>布置其他作业</item>
+    </string-array>
+
+    <string-array name="homework_subject_name_list">
+        <item>语文</item>
+        <item>数学</item>
+        <item>英语</item>
+        <item>物理</item>
+        <item>化学</item>
+        <item>历史</item>
+        <item>地理</item>
+        <item>生物</item>
+        <item>政治</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="leave_week_list">
+        <item> 日</item>
+        <item> 一</item>
+        <item> 二</item>
+        <item> 三</item>
+        <item> 四</item>
+        <item> 五</item>
+        <item> 六</item>
+    </string-array>
+
+    <string-array name="ask_leave_tab">
+        <item> 待审批</item>
+        <item> 请假申请</item>
+    </string-array>
+
+    <string-array name="leave_symptom_list">
+        <item>感冒</item>
+        <item>发烧</item>
+        <item>咳嗽</item>
+        <item>腹泻</item>
+        <item>水逗</item>
+        <item>手口足</item>
+        <item>腮腺炎</item>
+        <item>咽峡炎</item>
+        <item>其它传染病</item>
+        <item>其它非传染病</item>
+    </string-array>
+
+    <string-array name="sign_in_main_types">
+        <item>进行中</item>
+        <item>已结束</item>
+    </string-array>
+
+    <string-array name="sign_in_task_types">
+        <item>已打卡</item>
+        <item>未打卡</item>
+    </string-array>
+
+    <string-array name="sign_in_parent_detail_types">
+        <item>打卡日历</item>
+        <item>打卡成果</item>
+    </string-array>
+
+    <string-array name="new_ui_main_tab_name_array">
+        <item>全部</item>
+        <item>通知</item>
+        <item>作业</item>
+        <item>评语</item>
+        <item>考勤</item>
+        <item>请假</item>
+        <item>打卡</item>
+    </string-array>
+</resources>

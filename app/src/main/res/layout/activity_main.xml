@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:hint="@string/card_num" />
+
+    <EditText
+        android:id="@+id/text_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_input"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:hint="@string/card_validate_time" />
+
+    <EditText
+        android:id="@+id/text_cvc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_check"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:hint="@string/card_cvc" />
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_cvc"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_tip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/test_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_1"
+            android:layout_weight="1"
+            android:text="@string/test_btn_1" />
+
+        <Button
+            android:id="@+id/test_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_1"
+            android:layout_weight="1"
+            android:text="@string/test_btn_2" />
+
+        <Button
+            android:id="@+id/test_btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_1"
+            android:layout_weight="1"
+            android:text="@string/test_btn_3" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/switch_file_browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_1"
+        android:text="@string/switch_file_browser" />
+
+    <Button
+        android:id="@+id/switch_game_ox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/switch_file_browser"
+        android:layout_margin="@dimen/dp_1"
+        android:text="@string/switch_game_ox" />
+
+    <Button
+        android:id="@+id/switch_game_circle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/switch_game_ox"
+        android:layout_margin="@dimen/dp_1"
+        android:text="@string/switch_game_circle4" />
+
+    <Button
+        android:id="@+id/switch_game_gobang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/switch_game_circle4"
+        android:layout_margin="@dimen/dp_1"
+        android:text="@string/switch_game_gobang" />
+</RelativeLayout>

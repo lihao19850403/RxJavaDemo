@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".filebrowser.FileBrowserActivity">
+
+    <!-- 顶部控制区。 -->
+    <LinearLayout
+        android:id="@+id/control_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_5">
+
+        <!-- 前一页按钮。 -->
+        <Button
+            android:id="@+id/previous_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/previous" />
+
+        <!-- 根目录按钮。 -->
+        <Button
+            android:id="@+id/root_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/root" />
+    </LinearLayout>
+
+    <!-- 文件信息列表。 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/info_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/control_zone" />
+
+    <!-- 空文件夹提示。 -->
+    <LinearLayout
+        android:id="@+id/empty_tip_zone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/control_zone"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_tip_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/empty_path_file_list"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+</RelativeLayout>

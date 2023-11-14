@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="Panel">
+        <!-- Defines panel animation duration in ms. -->
+        <attr name="animationDuration" format="integer" />
+        <!-- Defines panel position on the screen. -->
+        <attr name="position">
+            <!-- Panel placed at top of the screen. -->
+            <enum name="top" value="0" />
+            <!-- Panel placed at bottom of the screen. -->
+            <enum name="bottom" value="1" />
+            <!-- Panel placed at left of the screen. -->
+            <enum name="left" value="2" />
+            <!-- Panel placed at right of the screen. -->
+            <enum name="right" value="3" />
+        </attr>
+        <!-- Identifier for the child that represents the panel's handle. -->
+        <attr name="handle" format="reference" />
+        <!-- Identifier for the child that represents the panel's content. -->
+        <attr name="content" format="reference" />
+        <!-- Defines if flying gesture forces linear interpolator in animation. -->
+        <attr name="linearFlying" format="boolean" />
+        <!-- Defines size relative to parent (must be in form: nn%p). -->
+        <attr name="weight" format="fraction" />
+        <!-- Defines opened handle (drawable/color). -->
+        <attr name="openedHandle" format="reference|color" />
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="closedHandle" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="SmoothButton">
+        <attr name="transitionDrawable" format="reference" />
+        <attr name="transitionDrawableLength" format="integer" />
+        <attr name="transitionTextColorUp" format="color" />
+        <attr name="transitionTextColorDown" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="Switcher">
+        <!-- Defines switcher animation duration in ms. -->
+        <attr name="animationDuration" />
+        <!-- Defines switcher idle timeout in ms. -->
+        <attr name="idleTimeout" format="integer" />
+        <!-- Defines opened handle (drawable). -->
+        <attr name="decreaseButton" format="reference" />
+        <!-- Defines opened handle (drawable). -->
+        <attr name="increaseButton" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--横向滚动ListView-->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <!--圆形图片-->
+    <declare-styleable name="MSCircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <!--actionSheet-->
+    <declare-styleable name="MSActionSheets">
+        <attr name="actionSheetStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MSActionSheet">
+        <attr name="showTitle" format="boolean" />
+        <attr name="overlayBackgroundColor" format="color"/>
+        <attr name="titleViewBackground" format="color|reference" />
+        <attr name="titleViewTextColor" format="color" />
+        <attr name="titleViewTextSize" format="dimension|reference" />
+        <attr name="actionSheetBackground" format="color|reference" />
+        <attr name="cancelButtonBackground" format="color|reference" />
+        <attr name="otherButtonTopBackground" format="color|reference" />
+        <attr name="otherButtonMiddleBackground" format="color|reference" />
+        <attr name="otherButtonBottomBackground" format="color|reference" />
+        <attr name="otherButtonSingleBackground" format="color|reference" />
+        <attr name="cancelButtonTextColor" format="color|reference" />
+        <attr name="otherButtonTopTextColor" format="color|reference" />
+        <attr name="otherButtonMiddleTextColor" format="color|reference" />
+        <attr name="otherButtonBottomTextColor" format="color|reference" />
+        <attr name="otherButtonSingleTextColor" format="color|reference" />
+        <attr name="actionSheetPadding" format="dimension|reference" />
+        <attr name="otherButtonSpacing" format="dimension|reference" />
+        <attr name="cancelButtonMarginTop" format="dimension|reference" />
+        <attr name="actionSheetTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <!--MSRatingBar-->
+    <declare-styleable name="MSRatingBar" tools:ignore="ResourceName">
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starImageWidth" format="dimension" />
+        <attr name="starImageHeight" format="dimension" />
+        <attr name="starImagePadding" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starNum" format="integer" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
+        <attr name="starHalf" format="reference" />
+        <attr name="clickable" format="boolean" />
+        <attr name="halfstart" format="boolean" />
+    </declare-styleable>
+
+    <!--视频拍摄-->
+    <declare-styleable name="VideoRecorderView">
+        <!-- 一次拍摄最长时间 -->
+        <attr name="record_max_time" format="integer" />
+        <attr name="model" format="integer" />
+        <attr name="video_width" format="integer" />
+        <attr name="video_height" format="integer" />
+    </declare-styleable>
+
+    <!--视频播放-->
+    <declare-styleable name="VideoPlayerView">
+        <attr name="isPlay" format="boolean" />
+        <attr name="videoPath" format="string" />
+    </declare-styleable>
+
+    <!--视频加载progressbar-->
+    <declare-styleable name="NumberCircleProgressBar">
+        <attr name="progress" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_circle_radius" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+        <attr name="progress_fill_mode" format="enum">
+            <enum name="rotate" value="0" />
+            <enum name="rising_water" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- 上图片下文字 -->
+    <declare-styleable name="ImageText">
+        <attr name="itSrc" format="reference" />
+        <attr name="itText" format="reference|string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="mtColor" format="reference|color" />
+        <attr name="imageSize" format="dimension" />
+    </declare-styleable>
+<!--    <attr name="textColor" format="reference|color" />-->
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="ScrollTabLayout">
+        <attr name="showNum" format="integer" />
+        <attr name="totalWidth" format="dimension" />
+        <attr name="tabWidth" format="dimension" />
+        <attr name="tabHeight" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

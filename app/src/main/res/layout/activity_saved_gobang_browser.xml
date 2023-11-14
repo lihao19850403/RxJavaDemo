@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gobang_game.view.GobangSavedActivity">
+
+    <!-- 文件信息列表。 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/info_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 空文件夹提示。 -->
+    <LinearLayout
+        android:id="@+id/empty_tip_zone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_tip_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/no_saved_files"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+</RelativeLayout>

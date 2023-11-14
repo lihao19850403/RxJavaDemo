@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="delete_friend_btn" type="id"/>
+    <item name="cancel_btn" type="id"/>
+    <item name="friend_remark_btn" type="id"/>
+    <item name="text_panel_layout" type="id"/>
+    <item name="expandableListView" type="id"/>
+    <item name="gridView" type="id"/>
+    <item name="group_layout" type="id"/>
+    <item name="title" type="id"/>
+    <item name="guest_phone" type="drawable"></item>
+    <item name="phonebook_tab1_hignlight" type="drawable"></item>
+    <item name="phonebook_tab1_normal" type="drawable"></item>
+    <item name="phonebook_tab2_hignlight" type="drawable"></item>
+    <item name="phonebook_tab2_normal" type="drawable"></item>
+    
+    <item name="tab_message_highlight" type="drawable"></item>
+    <item name="tab_selected_highlight" type="drawable"></item>
+    <item name="tab_schoolyard_highlight" type="drawable"></item>
+    <item name="tab_pxt_highlight" type="drawable"></item>
+    <item name="tab_discover_highlight" type="drawable"></item>
+    <item name="tab_safe_highlight" type="drawable"></item>
+    <item name="tab_rescloud_highlight" type="drawable"></item>
+    <item name="id_webview_detail_control" type="id"></item>
+    <item name="guide_1" type="drawable"></item>
+    <item name="guide_2" type="drawable"></item>
+    <item name="guide_3" type="drawable"></item>
+    <item name="guide_4" type="drawable"></item>
+    <item name="guide_new_1" type="drawable"></item>
+    <item name="guide_new_2" type="drawable"></item>
+    <item name="pop_window_btn_bg_green_frame" type="drawable"></item>
+    <item name="pop_window_btn_bg_green" type="drawable"></item>
+    
+
+    <item name="tag_id_for_glide" type="id"></item>
+
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+
+    <item name="sound_record_status" type="id"/>
+    <item name="checked" type="id"/>
+    <item name="video_url" type="id"/>
+    <item name="bottom_anchor_view" type="id"/>
+    <item name="ll_select" type="id"/>
+    <item name="fl_operation" type="id"/>
+    <item name="divider" type="id"/>
+    <item name="clear_input_iv" type="id"/>
+
+    <item name="zhaotong_camp_img_id" type="id"/>
+</resources>

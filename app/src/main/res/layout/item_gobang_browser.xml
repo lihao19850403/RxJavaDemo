@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".gobang_game.view.GobangSavedActivity">
+
+    <!-- 图标。 -->
+    <com.lihao.rxjavademo.gobang_game.view.GameGridView
+        android:id="@+id/file_info_icon"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100" />
+
+    <!-- 文件名。 -->
+    <TextView
+        android:id="@+id/file_info_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textSize="@dimen/sp_15" />
+
+    <!-- 指示器。 -->
+    <LinearLayout
+        android:id="@+id/next_player_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textSize="@dimen/sp_15" />
+
+        <com.lihao.rxjavademo.gobang_game.view.PlayerView
+            android:id="@+id/next_player_icon"
+            android:layout_width="@dimen/dp_13"
+            android:layout_height="@dimen/dp_13" />
+    </LinearLayout>
+</LinearLayout>
