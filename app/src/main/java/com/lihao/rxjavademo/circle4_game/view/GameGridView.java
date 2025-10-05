@@ -87,7 +87,8 @@ public class GameGridView extends View {
     public GridPosition getGridPosition(float touchX, float touchY) {
         int width = getWidth();
         int height = getHeight();
-        int rectWidth = width * 2 / 3;
+        int edge = Math.min(width, height);
+        int rectWidth = edge * 2 / 3;
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         int vMargin = (height - rectHeight) / 2;
@@ -123,9 +124,10 @@ public class GameGridView extends View {
     private void drawGridLines(Canvas canvas) {
         int width = getWidth();
         int height = getHeight();
+        int edge = Math.min(width, height);
         // 绘制棋盘背景。
         PAINT.setColor(Color.WHITE);
-        int rectWidth = width * 2 / 3;
+        int rectWidth = edge * 2 / 3;
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         int vMargin = (height - rectHeight) / 2;
@@ -175,10 +177,17 @@ public class GameGridView extends View {
     }
 
     private void drawCircle(Canvas canvas, int line, int number) {
+        int width = getWidth();
+        int height = getHeight();
+        int edge = Math.min(width, height);
         PAINT.setStrokeWidth(12.0f);
-        float startX = getWidth() / 6.0f;
-        float startY = (getHeight() - getWidth() * 2 / 3.0f) / 2;
-        float padding = getWidth() * 2 / 3.0f / GameGrid.GRID_NUMBERS;
+        int rectWidth = edge * 2 / 3;
+        int rectHeight = rectWidth;
+        int hMargin = (width - rectWidth) / 2;
+        int vMargin = (height - rectHeight) / 2;
+        float startX = hMargin;
+        float startY = vMargin;
+        float padding = edge * 2 / 3.0f / GameGrid.GRID_NUMBERS;
         float centerX = startX + padding * number + padding / 2;
         float centerY = startY + padding * line + padding / 2;
         canvas.drawCircle(centerX, centerY, padding * 3 / 8, PAINT);
@@ -194,9 +203,16 @@ public class GameGridView extends View {
         }
         PAINT.setColor(mGameStatus.winner == SymbolType.BLACK ? Color.BLACK : Color.RED);
         PAINT.setStrokeWidth(12.0f);
-        float startX = getWidth() / 6.0f;
-        float startY = (getHeight() - getWidth() * 2 / 3.0f) / 2;
-        float padding = getWidth() * 2 / 3.0f / GameGrid.GRID_NUMBERS;
+        int width = getWidth();
+        int height = getHeight();
+        int edge = Math.min(width, height);
+        int rectWidth = edge * 2 / 3;
+        int rectHeight = rectWidth;
+        int hMargin = (width - rectWidth) / 2;
+        int vMargin = (height - rectHeight) / 2;
+        float startX = hMargin;
+        float startY = vMargin;
+        float padding = edge * 2 / 3.0f / GameGrid.GRID_NUMBERS;
         boolean isVertical = mGameStatus.winningPositionStart.number == mGameStatus.winningPositionEnd.number;
         boolean isHorizontal = mGameStatus.winningPositionStart.line == mGameStatus.winningPositionEnd.line;
         boolean isLeftLean = mGameStatus.winningPositionStart.number > mGameStatus.winningPositionEnd.number;

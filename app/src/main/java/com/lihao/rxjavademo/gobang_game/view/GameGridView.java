@@ -90,7 +90,8 @@ public class GameGridView extends View {
     public GridPosition getGridPosition(float touchX, float touchY) {
         int width = getWidth();
         int height = getHeight();
-        int rectWidth = (int) (width * WIDTH_PERCENT);
+        int edge = Math.min(width, height);
+        int rectWidth = (int) (edge * WIDTH_PERCENT);
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         int vMargin = (height - rectHeight) / 2;
@@ -127,13 +128,14 @@ public class GameGridView extends View {
         int borderColor = getResources().getColor(android.R.color.holo_green_dark);
         int width = getWidth();
         int height = getHeight();
+        int edge = Math.min(width, height);
         // 绘制棋盘背景。
-        int rectWidth = (int) (width * WIDTH_PERCENT);
+        int rectWidth = (int) (edge * WIDTH_PERCENT);
         int rectHeight = rectWidth;
         float linePadding = rectWidth * 1.0f / GameGrid.GRID_NUMBERS;
         float hMargin = (width - rectWidth + linePadding) / 2;
         float vMargin = (height - rectHeight + linePadding) / 2;
-        float borderWidth = (width - rectWidth) / 4.0f;
+        float borderWidth = (edge - rectWidth) / 4.0f;
         PAINT.setStyle(Paint.Style.STROKE);
         PAINT.setColor(borderColor);
         PAINT.setStrokeWidth(borderWidth);
@@ -188,7 +190,8 @@ public class GameGridView extends View {
     private void drawCircle(Canvas canvas, int line, int number) {
         int width = getWidth();
         int height = getHeight();
-        int rectWidth = (int) (width * WIDTH_PERCENT);
+        int edge = Math.min(width, height);
+        int rectWidth = (int) (edge * WIDTH_PERCENT);
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         PAINT.setStrokeWidth(1.0f);
@@ -211,7 +214,8 @@ public class GameGridView extends View {
         }
         int width = getWidth();
         int height = getHeight();
-        int rectWidth = (int) (width * WIDTH_PERCENT);
+        int edge = Math.min(width, height);
+        int rectWidth = (int) (edge * WIDTH_PERCENT);
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         PAINT.setColor(mGameStatus.winner == SymbolType.BLACK ? Color.BLACK : Color.RED);

@@ -76,7 +76,8 @@ public abstract class GameGridView extends View {
     public GridPosition getGridPosition(float touchX, float touchY) {
         int width = getWidth();
         int height = getHeight();
-        int rectWidth = width * 2 / 3;
+        int edge = Math.min(width, height);
+        int rectWidth = edge * 2 / 3;
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         int vMargin = (height - rectHeight) / 2;
@@ -112,9 +113,10 @@ public abstract class GameGridView extends View {
     private void drawGridLines(Canvas canvas) {
         int width = getWidth();
         int height = getHeight();
+        int edge = Math.min(width, height);
         // 绘制棋盘背景。
         PAINT.setColor(Color.WHITE);
-        int rectWidth = width * 2 / 3;
+        int rectWidth = edge * 2 / 3;
         int rectHeight = rectWidth;
         int hMargin = (width - rectWidth) / 2;
         int vMargin = (height - rectHeight) / 2;
@@ -165,9 +167,16 @@ public abstract class GameGridView extends View {
 
     private void drawCircle(Canvas canvas, int line, int number) {
         PAINT.setStrokeWidth(12.0f);
-        float startX = getWidth() / 6.0f;
-        float startY = (getHeight() - getWidth() * 2 / 3.0f) / 2;
-        float padding = getWidth() * 2 / 3.0f / GameGrid.GRID_SIZE;
+        int width = getWidth();
+        int height = getHeight();
+        int edge = Math.min(width, height);
+        int rectWidth = edge * 2 / 3;
+        int rectHeight = rectWidth;
+        int hMargin = (width - rectWidth) / 2;
+        int vMargin = (height - rectHeight) / 2;
+        float startX = hMargin;
+        float startY = vMargin;
+        float padding = edge * 2 / 3.0f / GameGrid.GRID_SIZE;
         float centerX = startX + padding * number + padding / 2;
         float centerY = startY + padding * line + padding / 2;
         canvas.drawCircle(centerX, centerY, padding * 3 / 8, PAINT);
