@@ -4,6 +4,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    namespace "com.lihao.rxjavademo"
+
     defaultConfig {
         applicationId "com.lihao.rxjavademo"
         minSdkVersion 21
